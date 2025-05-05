@@ -27,3 +27,18 @@ body {
   h1 {
     color: #bb86fc;
   }
+
+.candle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  z-index: 1000;
+  opacity: 0.8;
+}
+
+.candle img {
+  width: 25%;
+  height: auto;
+  filter: drop-shadow(0 0 8px #ffcc66);
+}

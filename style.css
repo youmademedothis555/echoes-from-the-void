@@ -50,10 +50,26 @@ a:hover {
 
 @keyframes typing {
   from { width: 0ch; }
-  to { width: 56ch; } /* matches the length of your message */
+  to { width: 56ch; } 
 }
 
 @keyframes blink {
   from, to { border-color: transparent; }
   50% { border-color: #00ff00; }
+}
+.blinking-prompt {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  opacity: 0;
+  animation: blinkPrompt 1s step-end infinite, delayShow 4s forwards;
+}
+
+@keyframes blinkPrompt {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes delayShow {
+  to { opacity: 1; }
 }

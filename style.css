@@ -37,7 +37,7 @@ body {
 }
 
 .candle img {
-  width: 30px !important;
+  width: 100px !important;
   height: auto !important;
   max-width: 100%;
   display: block;

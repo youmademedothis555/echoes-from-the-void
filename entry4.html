@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>entry4.html — [locked]</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="typewriter">> ENTRY 4: ENCRYPTED FILE</h1>
+
+    <form id="fakeForm" class="password-form" onsubmit="checkPassword(event)">
+      <label for="password">Enter access code:</label><br>
+      <input type="password" id="password" name="password" autocomplete="off" />
+      <button type="submit">ACCESS</button>
+    </form>
+
+    <p id="response" class="access-response"></p>
+
+    <a href="/echoes-from-the-void/index.html" class="glitch-back">↩ return to shell</a>
+  </div>
+
+  <script>
+    function checkPassword(event) {
+      event.preventDefault();
+      const response = document.getElementById("response");
+      const input = document.getElementById("password").value.trim().toLowerCase();
+
+      response.style.color = "#ff3333";
+
+      if (input === "") {
+        response.textContent = "> ERROR: input cannot be empty.";
+      } else {
+        response.textContent = `> ACCESS DENIED: "${input}" not recognized.`;
+      }
+
+      document.getElementById("password").value = "";
+    }
+  </script>
+</body>
+</html>

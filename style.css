@@ -57,12 +57,14 @@ a:hover {
   from, to { border-color: transparent; }
   50% { border-color: #00ff00; }
 }
+
 .blinking-prompt {
   color: #00ff00;
   font-family: 'Courier New', monospace;
   font-size: 16px;
   opacity: 0;
-  animation: blinkPrompt 1s step-end infinite, delayShow 4s forwards;
+  animation: delayShow 4s forwards, blinkPrompt 1s step-end infinite;
+  animation-delay: 4s, 4s; 
 }
 
 @keyframes blinkPrompt {

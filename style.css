@@ -33,16 +33,17 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1) 1px,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 1px,
     transparent 1px,
     transparent 2px
   );
-  z-index: 9999;
+  z-index: 999; /* under cursor stuff, above background */
+  mix-blend-mode: multiply;
 }
 
 .typewriter {

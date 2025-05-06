@@ -101,12 +101,3 @@ a:hover {
   50% { opacity: 0.8; }
   100% { opacity: 0.5; }
 }
-
-@keyframes staticPulse {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.2; }
-}
-
-body::before {
-  animation: staticPulse 3s infinite alternate;
-}

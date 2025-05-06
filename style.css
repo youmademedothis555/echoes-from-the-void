@@ -45,15 +45,15 @@ a:hover {
   border-right: 2px solid #00ff00;
   white-space: nowrap;
   width: 0ch;
-  animation: typing 2.5s steps(30, end) forwards, blink 0.75s step-end infinite;
+  animation: typing 4s steps(56, end) forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0ch }
-  to { width: 28ch } 
+  from { width: 0ch; }
+  to { width: 56ch; } /* matches the length of your message */
 }
 
 @keyframes blink {
-  from, to { border-color: transparent }
+  from, to { border-color: transparent; }
   50% { border-color: #00ff00; }
 }

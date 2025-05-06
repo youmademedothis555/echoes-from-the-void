@@ -59,6 +59,11 @@ a:hover {
   50% { border-color: #00ff00; }
 }
 
+@keyframes typing4 {
+  from { width: 0ch; }
+  to { width: 28ch; }
+}
+
 .glitch-container {
   font-family: 'Courier New', monospace;
   color: #ff3333;

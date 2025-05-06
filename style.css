@@ -58,3 +58,50 @@ a:hover {
   50% { border-color: #00ff00; }
 }
 
+.glitch-container {
+  font-family: 'Courier New', monospace;
+  color: #ff3333;
+  text-align: center;
+  margin-top: 50px;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.glitch-title {
+  font-size: 28px;
+  color: #ff3333;
+  animation: glitchText 0.6s infinite;
+}
+
+.glitch-text {
+  font-size: 18px;
+  animation: glitchLines 1s infinite;
+  color: #cc0000;
+  line-height: 1.6;
+}
+
+.glitch-back {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff3333;
+  text-decoration: none;
+  animation: blinkPrompt 1s step-end infinite;
+}
+
+@keyframes glitchText {
+  0% { transform: translate(0); text-shadow: 1px 0 red, -1px 0 lime; }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); text-shadow: 2px 0 lime, -2px 0 red; }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); text-shadow: -1px 0 red, 1px 0 lime; }
+}
+
+@keyframes glitchLines {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; transform: skewX(5deg); }
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}

@@ -140,3 +140,15 @@ a:hover {
   color: #ff3333;
   animation: flicker 1.5s infinite alternate;
 }
+
+.secret-link {
+  color: #00ff00;
+  text-decoration: underline dotted;
+  font-style: italic;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.secret-link:hover {
+  color: #66ff66;
+  text-shadow: 0 0 8px #aaffaa;
+}

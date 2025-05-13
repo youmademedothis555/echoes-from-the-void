@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>6</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* GATE STYLES */
+    #gate-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .gate-panel {
+      width: 50%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        #333 0px,
+        #555 2px,
+        #222 4px
+      );
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.9);
+      transition: transform 2.5s ease-in-out;
+    }
+
+    #gate-overlay.open {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    #gate-overlay.open .left-panel {
+      transform: translateX(-100%);
+    }
+
+    #gate-overlay.open .right-panel {
+      transform: translateX(100%);
+    }
+
+    .gate-panel.left-panel {
+      transform: translateX(0);
+    }
+
+    .gate-panel.right-panel {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="typewriter">> LOG ENTRY 006: anomaly detected</h1>
+
+    <p>
+      > I saw something in the static today. A shimmer. A shape.<br>
+      > A <a href="#" id="garden-link" class="secret-link">garden</a>. That shouldn't exist here.<br>
+      > And yet I think I remember it.<br><br>
+      > I'm going in.
+    </p>
+
+    <a href="index.html" class="glitch-back">↩ return to shell</a>
+  </div>
+
+  <!-- GATE OVERLAY -->
+  <div id="gate-overlay">
+    <div class="gate-panel left-panel"></div>
+    <div class="gate-panel right-panel"></div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const gardenLink = document.getElementById("garden-link");
+    const gateOverlay = document.getElementById("gate-overlay");
+
+    gardenLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      gateOverlay.classList.add("open");
+
+      setTimeout(() => {
+        window.location.href = "garden.html";
+      }, 3000); // 3 seconds delay
+    });
+  </script>
+</body>
+</html>
